@@ -1,0 +1,52 @@
+{
+  "phrases": [
+    {
+      "de": "Guten Morgen",
+      "en": "Good morning",
+      "pl": "Dzień dobry"
+    },
+    {
+      "de": "Wie geht es dir?",
+      "en": "How are you?",
+      "pl": "Jak się masz?"
+    },
+    {
+      "de": "Danke, mir geht es gut",
+      "en": "Thank you, I'm fine",
+      "pl": "Dziękuję, mam się dobrze"
+    },
+    {
+      "de": "Auf Wiedersehen",
+      "en": "Goodbye",
+      "pl": "Do widzenia"
+    }
+  ],
+  "settings": {
+    "languages": [
+      { "code": "de", "showSubtitles": false, "voice": "male", "speed": 0.7 },
+      { "code": "en", "showSubtitles": false, "voice": "male", "speed": 1.0, "sublanguage": "en" },
+      { "code": "de", "showSubtitles": true, "voice": "female", "speed": 1.0, "sublanguage": "en" }
+    ],
+    "pauses": {
+      "betweenPhrases": 0.5,
+      "betweenCycles": 2
+    }
+  },
+  "voices": [
+    { "id": "de-male-0.7|Guten Morgen", "audioFile": "1-1" },
+    { "id": "en-male-1|Good morning", "audioFile": "1-2" },
+    { "id": "de-female-1|Guten Morgen", "audioFile": "1-3" },
+	
+    { "id": "de-male-0.7|Wie geht es dir?", "audioFile": "2-1" },
+    { "id": "en-male-1|How are you?", "audioFile": "2-2" },
+    { "id": "de-female-1|Wie geht es dir?", "audioFile": "2-3" },
+
+    { "id": "de-male-0.7|Danke, mir geht es gut", "audioFile": "3-1" },
+    { "id": "en-male-1|Thank you, I'm fine", "audioFile": "3-2" },
+    { "id": "de-female-1|Danke, mir geht es gut", "audioFile": "3-3" },
+
+    { "id": "de-male-0.7|Auf Wiedersehen", "audioFile": "4-1" },
+    { "id": "en-male-1|Goodbye", "audioFile": "4-2" },
+    { "id": "de-female-1|Auf Wiedersehen"	, "audioFile": "4-3" }
+  ]
+}
