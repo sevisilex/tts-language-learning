@@ -14,7 +14,7 @@ interface ImportDemoDialogProps {
 export function ImportDemoDialog({ isOpen, onClose, settings, onSettingsChange }: ImportDemoDialogProps) {
   const handleImportDemo = async () => {
     try {
-      const response = await fetch('/demo/data.json')
+      const response = await fetch(`${import.meta.env.VITE_BASE || '/'}demo/data.json`)
       const data = (await response.json()) as { phrases: Record<string, string>[]; settings: Settings; voices: { id: string; audioFile: string }[] }
       const phrases: Phrase[] = data.phrases.map((item) => ({ langs: item }))
       await importPhrase(phrases)
@@ -22,7 +22,7 @@ export function ImportDemoDialog({ isOpen, onClose, settings, onSettingsChange }
 
       await Promise.all(
         data.voices.map(async (voice) => {
-          const response = await fetch(`/demo/${voice.audioFile}.json`)
+          const response = await fetch(`${import.meta.env.VITE_BASE || '/'}demo/${voice.audioFile}.json`)
           const data = (await response.json()) as { audioContent: string }
           addAudioCache(voice.id, data.audioContent)
         })

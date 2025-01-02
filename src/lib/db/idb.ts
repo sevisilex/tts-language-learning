@@ -26,8 +26,8 @@ interface DbSchema {
   }
 }
 
-const DB_NAME = 'tts-language-learning'
-const DB_VERSION = 1 // Increased version number
+const DB_NAME = import.meta.env.VITE_DB_NAME || 'tts-language-learning'
+const DB_VERSION = (import.meta.env.DB_VERSION && parseInt(import.meta.env.DB_VERSION)) || 1
 const CACHE_EXPIRY_DAYS = 3
 const MAX_CACHE_SIZE_MB = 50 // Maximum cache size in MB
 
